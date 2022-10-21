@@ -28,8 +28,8 @@ const picsDic ={
   17:"pics/tahiro-achoub-ghimenz-tls-unsplash_n76yy.jpg",
   18:"pics/tetbirt-salim-4lunkr1gtd8-unsplash_rpt6s.jpg",
 }
-const firstImage = ref(`/_nuxt/${picsDic[0]}`);
-const secondImage= ref(`/_nuxt/${picsDic[1]}`);
+const firstImage = ref(require(`~/assets/${picsDic[0]}`));
+const secondImage= ref(require(`~/assets/${picsDic[1]}`));
 </script>
 <script>
 export default {
@@ -44,25 +44,34 @@ export default {
   }
   .cont>img{
     width: 100%;
-    height:auto;
+    height:100vh;
     object-position: center;
      object-fit: cover;
      position: absolute;
   }
 .first-image{
-  animation: move 10s infinite;
+  animation: firstmove 12s infinite;
   animation-delay: 3s;
 }
-@keyframes move{
-  0%{
-    transform: translateeY(0);
-  }
-  33%{transform: translateY(100%); opacity: 0;}
-  66%{transform: translateY(-100%);opacity: 0;}
-  100%{transform: translateeY(0);opacity: 1;}
+
+@keyframes firstmove{
+  0%{transform: translateY(0);}
+  25%{transform: translateY(100%); opacity: 0;}
+  25.000001%{transform: translateY(-100%); opacity: 0;}
+  50%{transform: translateY(-100%); opacity: 0;}
+  75%{transform: translateY(0%);opacity: 1;} 
+  100%{transform: translateY(0);opacity: 1;}
 }
 .second-image{
-  animation: move 10s infinite;
-  animation-delay: 6s;
+  transform: translateY(-100%);
+  animation: secondmove 12s infinite;
+  animation-delay: 3s;
+}
+@keyframes secondmove{
+  0%{ transform: translateY(-100%);}
+  25%{transform: translateY(0%); opacity: 1;}
+  50%{transform: translateY(0%); opacity: 1;}
+  75%{transform: translateY(100%);opacity: 0;}
+  100%{transform: translateY(-100%);opacity: 0;}
 }
 </style>
