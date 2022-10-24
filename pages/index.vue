@@ -1,15 +1,20 @@
 <template>
-  <ImagesCarousel></ImagesCarousel>
+  <div>
+    <ImagesCarousel></ImagesCarousel>
+    <AlgeriaFeatures></AlgeriaFeatures>
+  </div>
 </template>
 
 <script>
+import AlgeriaFeatures from '~/components/algeriaFeatures.vue';
 import ImagesCarousel from '~/components/imagesCarousel.vue';
 export default {
-    name: "IndexPage",
-    components: { ImagesCarousel }
+  name: "IndexPage",
+  components: { ImagesCarousel, AlgeriaFeatures }
 }
 </script>
 <style>
- body{
-    margin: 0;
-  }</style>
+body {
+  margin: 0;
+}
+</style>
