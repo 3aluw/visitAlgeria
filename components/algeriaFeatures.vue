@@ -2,7 +2,13 @@
     <div>
         <section class="cont">
             <div class="text-cont">
-                <p class="sub-head"></p>
+
+                <div class="sub-head">
+                    <svg height="2" viewBox="0 0 244 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="244" y1="1" y2="1" stroke-width="2" />
+                    </svg>
+                    <p class="title">Population</p>
+                </div>
                 <p class="text"></p>
             </div>
 
@@ -25,16 +31,33 @@
 
             </div>
             <div class="text-cont">
-                <p class="sub-head"></p>
-                <p class="text"></p>
-            </div>
 
-            <div class="text-cont">
-                <p class="sub-head"></p>
+                <div class="sub-head">
+                    <svg width="244" height="2" viewBox="0 0 244 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="244" y1="1" y2="1" stroke-width="2" />
+                    </svg>
+                    <p class="title">nature</p>
+                </div>
                 <p class="text"></p>
             </div>
             <div class="text-cont">
-                <p class="sub-head"></p>
+
+                <div class="sub-head">
+                    <svg width="244" height="2" viewBox="0 0 244 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="244" y1="1" y2="1" stroke-width="2" />
+                    </svg>
+                    <p class="title">history</p>
+                </div>
+                <p class="text"></p>
+            </div>
+            <div class="text-cont">
+
+                <div class="sub-head">
+                    <svg width="244" height="2" viewBox="0 0 244 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="244" y1="1" y2="1" stroke-width="2" />
+                    </svg>
+                    <p class="title">safety</p>
+                </div>
                 <p class="text"></p>
             </div>
         </section>
@@ -51,8 +74,11 @@ export default {
 </script>
 <style scoped>
 .cont {
+    color: white;
     height: 100vh;
-
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     background: url("~/assets/pexels-felix-mittermeier-956999.jpg");
@@ -60,6 +86,7 @@ export default {
     background-size: cover;
 }
 
+/*Primary SVG */
 .svg-cont {
     grid-column: 2/3;
     grid-row: 1/3;
@@ -69,6 +96,37 @@ export default {
 
 .svg-cont>svg {
     width: 100%;
-    height: 75%;
+    max-height: 75%;
+
+}
+
+
+/*text sections*/
+.sub-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    padding-top: 1rem;
+}
+
+.sub-head:hover>* {
+    color: rgb(0, 180, 51);
+
+    stroke: rgb(0, 180, 51);
+}
+
+.sub-head>svg {
+    display: block;
+    width: 200px;
+    stroke: white;
+}
+
+.title {
+    color: white;
+    font-family: outfit;
+    font-size: 2rem;
+    margin: 0 auto;
+    cursor: pointer;
 }
 </style>

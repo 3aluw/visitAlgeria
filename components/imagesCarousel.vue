@@ -7,12 +7,14 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+
+
+import { onMounted, ref, computed } from "vue";
 const wordsDic = ["nature", "diversity", "culture", "sahara", "history"];
 const picsDic = {
   0: ["pics/ahmed-el-amine-nakib--sos_rlimpq-unsplash_vf7o3.jpg", 0],
   1: ["pics/azzedine-rouichi-9p4pigah7ho-unsplash_2f0xz.jpg", 4],
-  2: [""],
+  2: ["pics/tetbirt-salim-4lunkr1gtd8-unsplash_rpt6s.jpg", 1],
   3: ["pics/bilou-bilal-t6p8fg1ye-y-unsplash_fczpd.jpg", 0],
   4: ["pics/mido-art-nip2ckjwghm-unsplash_e336p.jpg", 3],
   5: ["pics/daoud-abismail-umv3cyw6zbu-unsplash_yi7gc.jpg", 2],
@@ -22,17 +24,40 @@ const picsDic = {
   9: ["pics/imgvortex-zyxtzqw51z4-unsplash_r73gs.jpg", 3],
   10: ["pics/issam-ammiche-z21iaeduucg-unsplash_igcrv.jpg", 2],
   11: ["pics/jamil-kabar-jrnrb3hgetc-unsplash_mebyv.jpg", 4],
-  12: ["pics/kat-med-qjyxexdlpve-unsplash_rfzqv.jpg", 2],
+  12: ["pics/tahiro-achoub-ghimenz-tls-unsplash_n76yy.jpg", 4],
   13: ["pics/fenec.jpg", 3],
   14: ["pics/nassim-allia-jfrtceex5ue-unsplash_j8su5.jpg", 0],
-  15: [""],
+  15: ["pics/Algerian-Spicy-Chicken-and-Chickpea-Tagin.jpg"],
   16: ["pics/masjid.jpg", 2],
   17: ["pics/tahiro-achoub-ghimenz-tls-unsplash_n76yy.jpg", 4],
-  18: ["pics/tetbirt-salim-4lunkr1gtd8-unsplash_rpt6s.jpg", 1],
 };
 
-const firstImage = ref(require(`~/assets/${picsDic[0][0]}`));
-const secondImage = ref(require(`~/assets/${picsDic[1][0]}`));
+const firstImageIndex = ref(0);
+const firstImage = computed(() => require(`~/assets/${picsDic[firstImageIndex.value][0]}`));
+const secondImageIndex = ref(1);
+const secondImage = computed(() => require(`~/assets/${picsDic[secondImageIndex.value][0]}`));
+
+onMounted(() => {
+  const objLen = Object.keys(picsDic).length - 1;
+  window.addEventListener('load', () => {
+    console.log(5)
+    setTimeout(() => {
+      firstImageIndex.value += 2;
+      setInterval(() => {
+        firstImageIndex.value + 2 <= objLen ? firstImageIndex.value += 2 : firstImageIndex.value = 0;
+
+      }, 11000);
+    }, 2250)
+
+    setTimeout(() => {
+      secondImageIndex.value += 2;
+      setInterval(() => {
+        secondImageIndex.value + 2 <= objLen ? secondImageIndex.value += 2 : secondImageIndex.value = 1;
+      }, 11000);
+    }, 8750)
+
+  })
+})
 </script>
 <script>
 export default {

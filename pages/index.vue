@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="global-cont">
     <ImagesCarousel></ImagesCarousel>
     <AlgeriaFeatures></AlgeriaFeatures>
   </div>
@@ -14,7 +14,9 @@ export default {
 }
 </script>
 <style>
-body {
+.global-cont {
   margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 </style>
