@@ -1,8 +1,8 @@
 <template>
   <section class="cont">
-    <p> Algeria has its own <span class="moving-text">nature</span> </p>
-    <img class="first-image" :src="firstImage" alt="a">
-    <img class="second-image" :src="secondImage" alt="a">
+    <p> Algeria has its own <span class="moving-text" ref="templText">{{ text }}</span> </p>
+    <img class="first-image" :src="firstImage" ref="templFirstImage" alt="a">
+    <img class="second-image" :src="secondImage" ref="templSecondImage" alt="a">
   </section>
 </template>
 
@@ -10,10 +10,12 @@
 
 
 import { onMounted, ref, computed } from "vue";
+
+
 const wordsDic = ["nature", "diversity", "culture", "sahara", "history"];
 const picsDic = {
   0: ["pics/ahmed-el-amine-nakib--sos_rlimpq-unsplash_vf7o3.jpg", 0],
-  1: ["pics/azzedine-rouichi-9p4pigah7ho-unsplash_2f0xz.jpg", 4],
+  1: ["pics/azzedine-rouichi-9p4pigah7ho-unsplash_2f0xz.jpg", 3],
   2: ["pics/tetbirt-salim-4lunkr1gtd8-unsplash_rpt6s.jpg", 1],
   3: ["pics/bilou-bilal-t6p8fg1ye-y-unsplash_fczpd.jpg", 0],
   4: ["pics/mido-art-nip2ckjwghm-unsplash_e336p.jpg", 3],
@@ -37,25 +39,46 @@ const firstImage = computed(() => require(`~/assets/${picsDic[firstImageIndex.va
 const secondImageIndex = ref(1);
 const secondImage = computed(() => require(`~/assets/${picsDic[secondImageIndex.value][0]}`));
 
+const textIndex = ref(0);
+const text = computed(() => wordsDic[picsDic[textIndex.value][1]]);
+
+
+const templText = ref(null);
+const templFirstImage = ref(null)
+const templSecondImage = ref(null)
+const animatedEl = [templText, templFirstImage, templSecondImage];
+
 onMounted(() => {
+
   const objLen = Object.keys(picsDic).length - 1;
   window.addEventListener('load', () => {
-    console.log(5)
+    animatedEl.forEach((el) => el.value.style.animationPlayState = "running")
     setTimeout(() => {
-      firstImageIndex.value += 2;
-      setInterval(() => {
-        firstImageIndex.value + 2 <= objLen ? firstImageIndex.value += 2 : firstImageIndex.value = 0;
+      setTimeout(() => {
+        firstImageIndex.value += 2;
+        setInterval(() => {
+          console.log("done - 1");
+          firstImageIndex.value + 2 <= objLen ? firstImageIndex.value += 2 : firstImageIndex.value = 0;
 
-      }, 11000);
-    }, 2250)
+        }, 9000);
+      }, 2500)
 
-    setTimeout(() => {
-      secondImageIndex.value += 2;
-      setInterval(() => {
-        secondImageIndex.value + 2 <= objLen ? secondImageIndex.value += 2 : secondImageIndex.value = 1;
-      }, 11000);
-    }, 8750)
+      setTimeout(() => {
+        secondImageIndex.value += 2;
+        setInterval(() => {
+          console.log("done - 2");
+          secondImageIndex.value + 2 <= objLen ? secondImageIndex.value += 2 : secondImageIndex.value = 1;
+        }, 9000);
+      }, 8800)
+      setTimeout(() => {
+        textIndex.value += 1;
+        setInterval(() => {
+          textIndex.value + 1 <= objLen ? textIndex.value += 1 : textIndex.value = 0;
+        }, 4500)
+      }, 2300)
 
+
+    }, 500)
   })
 })
 </script>
@@ -88,8 +111,9 @@ export default {
 .moving-text {
   color: rgb(0, 180, 51);
   display: inline-block;
-  animation: textmove 4.5s infinite;
+  animation: textmove 4.5s infinite linear;
   animation-delay: 2s;
+  animation-play-state: paused;
 }
 
 @keyframes textmove {
@@ -123,8 +147,9 @@ export default {
 }
 
 .first-image {
-  animation: firstmove 9s infinite;
+  animation: firstmove 9s infinite linear;
   animation-delay: 2s;
+  animation-play-state: paused;
 }
 
 @keyframes firstmove {
@@ -160,8 +185,9 @@ export default {
 
 .second-image {
   transform: translateY(-100%);
-  animation: secondmove 9s infinite;
+  animation: secondmove 9s infinite linear;
   animation-delay: 2s;
+  animation-play-state: paused;
 }
 
 @keyframes secondmove {
