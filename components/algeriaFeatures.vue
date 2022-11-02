@@ -96,10 +96,10 @@ export default {
     color: white;
     height: 100vh;
     max-height: 100vh;
-    max-width: 100vw;
+    max-width: 100%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 1fr 2fr 1fr;
     background: url("~/assets/pexels-felix-mittermeier-956999.jpg");
     background-position: center;
     background-size: cover;
