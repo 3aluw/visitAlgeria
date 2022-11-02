@@ -57,7 +57,7 @@ onMounted(() => {
       setTimeout(() => {
         firstImageIndex.value += 2;
         setInterval(() => {
-          console.log("done - 1");
+
           firstImageIndex.value + 2 <= objLen ? firstImageIndex.value += 2 : firstImageIndex.value = 0;
 
         }, 9000);
@@ -66,7 +66,7 @@ onMounted(() => {
       setTimeout(() => {
         secondImageIndex.value += 2;
         setInterval(() => {
-          console.log("done - 2");
+
           secondImageIndex.value + 2 <= objLen ? secondImageIndex.value += 2 : secondImageIndex.value = 1;
         }, 9000);
       }, 8800)
@@ -75,7 +75,7 @@ onMounted(() => {
         setInterval(() => {
           textIndex.value + 1 <= objLen ? textIndex.value += 1 : textIndex.value = 0;
         }, 4500)
-      }, 2300)
+      }, 2000)
 
 
     }, 500)

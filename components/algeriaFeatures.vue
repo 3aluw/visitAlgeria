@@ -9,7 +9,12 @@
                     </svg>
                     <p class="title">Population</p>
                 </div>
-                <p class="text"></p>
+                <div class="p-cont">
+                    <p class="text"> Algeria is one of the most diverse countries in the world.<br>
+
+                        From north to south, east to west and from desert to coast, it's a nation that has more than one
+                        ethenic, Algerian language consists of three different dialects: Arabic, Berber and French</p>
+                </div>
             </div>
 
             <div class="svg-cont">
@@ -38,7 +43,11 @@
                     </svg>
                     <p class="title">nature</p>
                 </div>
-                <p class="text"></p>
+                <div class="p-cont">
+                    <p class="text">From north to south, east to west and from desert to coast, Algeria combines
+                        different climate!, You can feel cold in Algiers and warm in Ouergla, it has cities, country
+                        sides, deserts and snow mountaians </p>
+                </div>
             </div>
             <div class="text-cont">
 
@@ -48,7 +57,13 @@
                     </svg>
                     <p class="title">history</p>
                 </div>
-                <p class="text"></p>
+                <div class="p-cont">
+                    <p class="text">
+                        Since the dawn of human time, North Africa has been populated by barbers, who have fought
+                        against several colonial powers. The last one was the french who declared independence in 1962;
+                        since then, Algeria is a free country.
+                    </p>
+                </div>
             </div>
             <div class="text-cont">
 
@@ -56,9 +71,13 @@
                     <svg width="244" height="2" viewBox="0 0 244 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="244" y1="1" y2="1" stroke-width="2" />
                     </svg>
-                    <p class="title">safety</p>
+                    <p class="title">Infrastructure</p>
                 </div>
-                <p class="text"></p>
+                <div class="p-cont">
+                    <p class="text">
+                        Algeria has a robust infustracture, you can find here cheap tranportation, a free medical care!
+                    </p>
+                </div>
             </div>
         </section>
     </div>
@@ -102,6 +121,11 @@ export default {
 
 
 /*text sections*/
+.text-cont {
+    text-align: center;
+    position: relative;
+}
+
 .sub-head {
     display: flex;
     flex-direction: column;
@@ -112,7 +136,7 @@ export default {
 
 .sub-head:hover>* {
     color: rgb(0, 180, 51);
-
+    transition: all 0.2s ease-in;
     stroke: rgb(0, 180, 51);
 }
 
@@ -122,11 +146,37 @@ export default {
     stroke: white;
 }
 
+
 .title {
     color: white;
     font-family: outfit;
     font-size: 2rem;
     margin: 0 auto;
     cursor: pointer;
+}
+
+
+.p-cont {
+    overflow: hidden;
+    position: relative;
+    height: 80%;
+    width: auto;
+
+}
+
+.p-cont>p {
+    padding-inline: 0.3rem;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+    -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 0.123);
+    color: white;
+}
+
+.sub-head:hover+.p-cont>p {
+    transform: translateY(0%);
+    opacity: 1;
+    display: block;
 }
 </style>
