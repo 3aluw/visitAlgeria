@@ -15,7 +15,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
+  runtimeConfig: {
+    public: {
+      contentfulSpace: process.env.NUXT_CONTENTFUL_SPACE,
+      contentfulAcsessToken : process.env.NUXT_CONTENTFUL_PUBLIC_ACCESS_TOKEN,
+    }
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -35,7 +40,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    "@pinia/nuxt",
+    {
+      autoImports: ["defineStore", "acceptHMRUpdate"],
+    },
   ],
+  
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

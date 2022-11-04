@@ -3,6 +3,7 @@
     <ImagesCarousel></ImagesCarousel>
     <AlgeriaFeatures></AlgeriaFeatures>
     <BestPlaces></BestPlaces>
+    <Cities></Cities>
   </div>
 </template>
 
@@ -10,9 +11,10 @@
 import AlgeriaFeatures from '~/components/algeriaFeatures.vue';
 import ImagesCarousel from '~/components/imagesCarousel.vue';
 import BestPlaces from '~/components/bestPlaces.vue';
+import Cities from '~/components/cities.vue';
 export default {
   name: "IndexPage",
-  components: { ImagesCarousel, AlgeriaFeatures, BestPlaces }
+  components: { ImagesCarousel, AlgeriaFeatures, BestPlaces, Cities }
 }
 </script>
 <style>
