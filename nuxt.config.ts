@@ -1,20 +1,7 @@
-export default {
+
+export default defineNuxtConfig ({
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'visitAlgeria',
-    htmlAttrs: {
-      lang: 'en'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+
   runtimeConfig: {
     public: {
       contentfulSpace: process.env.NUXT_CONTENTFUL_SPACE,
@@ -27,6 +14,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/Contentful.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,10 +28,11 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
     "@pinia/nuxt",
     {
       autoImports: ["defineStore", "acceptHMRUpdate"],
-    },
+    },]
   ],
   
 
@@ -51,3 +40,4 @@ export default {
   build: {
   }
 }
+)
