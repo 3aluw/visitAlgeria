@@ -35,9 +35,9 @@ const picsDic = {
 };
 
 const firstImageIndex = ref(0);
-const firstImage = computed(() => require(`~/assets/${picsDic[firstImageIndex.value][0]}`));
+const firstImage = computed(() => `./${picsDic[firstImageIndex.value][0]}`);
 const secondImageIndex = ref(1);
-const secondImage = computed(() => require(`~/assets/${picsDic[secondImageIndex.value][0]}`));
+const secondImage = computed(() => `./${picsDic[secondImageIndex.value][0]}`);
 
 const textIndex = ref(0);
 const text = computed(() => wordsDic[picsDic[textIndex.value][1]]);
@@ -90,7 +90,7 @@ export default {
 <style scoped>
 .cont {
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;

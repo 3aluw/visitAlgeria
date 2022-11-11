@@ -1,9 +1,10 @@
 import * as contentful from "contentful";
-const config = useRuntimeConfig();
+
 export default defineNuxtPlugin((nuxtapp)=>{
+    const runtimeConfig  = useRuntimeConfig();
     const client = contentful.createClient({
-        space: config.contentfulSpace,
-        accessToken: contentfulAcsessToken,
+        space: runtimeConfig .contentfulSpace,
+        accessToken: runtimeConfig.contentfulAcsessToken,
       });
       return{
         provide:{

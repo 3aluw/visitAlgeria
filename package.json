@@ -4,13 +4,15 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.1.3",
-    "nuxt": "^3.0.0-rc.13"
+    "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.4.3"
+    "@pinia/nuxt": "^0.4.3",
+    "contentful": "^9.2.9"
   }
 }

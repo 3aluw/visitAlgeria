@@ -1,19 +1,19 @@
 import { defineStore, acceptHMRUpdate  } from "pinia";
  
 export const AlgerianCitiesStore = defineStore("AlgerianCities",()=>{
-
+let cities =ref([])
 
   async function FetchCities(){
   const {$contentful} = useNuxtApp();
   const Entries = await $contentful.getEntries({
-    content_type : "product",
+    content_type : "algerianCities",
   });
-  console.log(Entries);
+   cities.value = Entries.items;
   return Entries
-  }
-  return{
-    FetchCities
-  }
+  };
+
+
+  return{cities,FetchCities}
 });
 
 
