@@ -2,7 +2,7 @@
 
 
     <li :class="{ 'big-item': city.fields.majorCity }" class="flex items-center justify-between">
-        <img v-if="city.fields.majorCity" src="~/assets/icons/arrow-circle-right.svg">
+        <img v-if="city.fields.majorCity" :src=iconPath>
         <p>{{ city.fields.name }}</p>
         <img src="~/assets/icons/arrow-circle-right.svg">
     </li>
@@ -11,17 +11,18 @@
 </template>
   
 <script setup>
-const porps = defineProps(["city"])
+const props = defineProps(["city"])
 
+const iconPath = computed(() => iconDic[props.city.fields.name]);
 const iconDic = {
-    'Algiers': "~/assets/icons/star.svg",
-    'Ghardaia': "~/assets/icons/mountain.svg",
-    'Constantine': "~/assets/icons/bridge 1.svg",
-    'Oran': "~/assets/icons/castle.svg",
-    'Batna': "~/assets/icons/roman gate.svg",
-    'Tamenrasset': "~/assets/icons/desert.svg",
-    'Annaba': "~/assets/icons/sea.svg",
-    'Bejaia': "~/assets/icons/north-mountain.svg",
+    'Algiers': "./icons/star.svg",
+    'Ghardaia': "./icons/mountain.svg",
+    'Constantine': "./icons/bridge 1.svg",
+    'Oran': "./icons/castle.svg",
+    'Batna': "./icons/roman gate.svg",
+    'Tamenrasset': "./icons/desert.svg",
+    'Annaba': "./icons/sea.svg",
+    'Bejaia': "./icons/north-mountain.svg",
 }
 
 </script>
@@ -41,4 +42,6 @@ export default {
 
     grid-column-start: 1;
 }
+
+li img {}
 </style>
