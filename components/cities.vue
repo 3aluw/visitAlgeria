@@ -20,13 +20,19 @@ export default {
 }
 </script>
 <style scoped>
+section {
+  background: rgba(228, 240, 255, 0.42);
+  ;
+}
+
 .list {
-  margin-block: 3rem;
-  margin-inline: 2rem;
-  height: calc(100vh - 6rem);
+  margin-block: 1rem;
+  margin-inline: 1rem;
+  height: calc(100vh - 2rem);
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(16, 1fr);
   grid-auto-flow: column;
+  gap: 0.8rem;
 }
 </style>
