@@ -26,8 +26,8 @@ section {
 }
 
 .list {
-  margin-block: 1rem;
-  margin-inline: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
   height: calc(100vh - 2rem);
   display: grid;
   grid-template-columns: 1fr 2fr;
