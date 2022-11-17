@@ -61,7 +61,7 @@ onMounted(() => {
           firstImageIndex.value + 2 <= objLen ? firstImageIndex.value += 2 : firstImageIndex.value = 0;
 
         }, 9000);
-      }, 2500)
+      }, 4000)
 
       setTimeout(() => {
         secondImageIndex.value += 2;
