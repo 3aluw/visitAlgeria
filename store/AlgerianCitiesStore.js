@@ -26,8 +26,9 @@ let selectedCity= ref([]);
     content_type : "algerianCities",
     "sys.id": res,
   });
-  console.log(Entries)
+  
   selectedCity.value = Entries.items;
+  console.log( selectedCity.value)
   }
 
   return{cities,selectedCity,FetchCities,fetchOneCity}
