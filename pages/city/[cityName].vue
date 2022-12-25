@@ -27,7 +27,10 @@
             </ul>
 
         </section>
-        <section class="things-to-do"></section>
+        <section class="things-to-do">
+            <h2>Places to visit in {{ cityData.name }}</h2>
+            <carousel :items="cityData.attractions"></carousel>
+        </section>
         <section class="hospitality">
             <h2>Top Hotels and restaurents in {{ cityData.name }}</h2>
             <iframe :src="cityData.urls[0]" width="640" height="480"></iframe>
@@ -38,6 +41,7 @@
     </div>
 </template>
 <script setup>
+import carousel from "@/components/reusable/carousel.vue";
 import { AlgerianCitiesStore } from "~/store/AlgerianCitiesStore";
 //extract the city name from the route
 const route = useRoute()
