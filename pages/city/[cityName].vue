@@ -79,6 +79,9 @@ h2 {
     padding: 1rem;
 }
 
+section {
+    margin-block: 3rem;
+}
 
 .cityNumber {
     font-family: 'Century Gothic', serif;

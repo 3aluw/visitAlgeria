@@ -1,13 +1,19 @@
-<template>
+<template v-if="items">
     <swiper :modules="modules" :slides-per-view="3" :space-between="50" navigation @swiper="onSwiper"
         @slideChange="onSlideChange">
+        <swiper-slide v-for="item in items" :key="item.title">
 
-        <swiper-slide>Slide 1 </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
+            <article class="card-cont">
+                <a :href="item.href">
+                    <div class="item-image">
+                        <img :src="item.image" :alt="item.title">
+                    </div>
+                    <p class="item-title">{{ item.title }}</p>
+                </a>
+            </article>
+
+        </swiper-slide>
+
 
     </swiper>
 </template>
@@ -50,6 +56,64 @@ export default {
 <style>
 .swiper-button-next,
 .swiper-button-prev {
-    color: #17793e;
+    color: white;
+    border: 30px solid rgb(0, 0, 0);
+    border-radius: 100%;
+}
+
+.swiper-button-disabled {
+    pointer-events: auto !important;
+    cursor: no-drop !important;
+}
+
+/*card styling*/
+
+.swiper-slide {
+    height: auto;
+}
+
+.card-cont {
+
+    border: 0.5px solid black;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.card-cont:hover {
+    color: rgb(4, 184, 73);
+    filter: contrast(115%);
+    font-size: 1.2rem;
+}
+
+.card-cont>a {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.item-image {
+    display: block;
+    height: 80%;
+
+    border-radius: 12px;
+}
+
+.item-image>img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.item-title {
+    display: block;
+    font-size: 1.2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 500;
 }
 </style>
