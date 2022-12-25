@@ -17,11 +17,13 @@
             <ul class="line-one flex justify-around">
                 <li
                     :class="cityData.safety == 'Excelent' ? 'bold-green' : cityData.safety == 'Good' ? 'green' : 'orange'">
-                    <span>safety:</span> {{ cityData.safety }}
+
+                    <span>safety:</span> {{ cityData.safety }} <infoIconVue>{{ safetyMessage }}</infoIconVue>
                 </li>
                 <li
                     :class="cityData.infustracture == 'Excelent' ? 'bold-green' : cityData.infustracture == 'Good' ? 'green' : 'orange'">
-                    <span>infustracture:</span> {{ cityData.infustracture }}
+                    <span>infustracture:</span> {{ cityData.infustracture }}<infoIconVue>{{ infustractureMessage }}
+                    </infoIconVue>
                 </li>
 
             </ul>
@@ -42,6 +44,7 @@
 </template>
 <script setup>
 import carousel from "@/components/reusable/carousel.vue";
+import infoIconVue from "~~/components/reusable/infoIcon.vue";
 import { AlgerianCitiesStore } from "~/store/AlgerianCitiesStore";
 //extract the city name from the route
 const route = useRoute()
@@ -50,8 +53,12 @@ const cityName = route.params.cityName;
 onMounted(() => { AlgerianCitiesStore().fetchOneCity(cityName) })
 
 const cityData = computed(() => AlgerianCitiesStore().selectedCity[0]?.fields);
-
-
+const safetyMessage = computed(() => {
+    return cityData.safety == "Excelent" ? "You are in a very safe city" : "Overall you will be okay, but avoid going to shady neighnours or wandering lonely late at night  "
+})
+const infustractureMessage = computed(() => {
+    return cityData.infustracture == "Excelent" ? "Hopefully, You will easily find all your needs" : "You are advised to plan your trip in this city very well  "
+})
 </script>
 <style scoped>
 /*UTILITY*/
@@ -71,7 +78,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: sans-serif;
-
+    margin-block: 1rem;
 }
 
 
@@ -100,6 +107,7 @@ section {
 .summary {
     align-self: end;
     padding-block: 1rem;
+    font-weight: bold;
 }
 
 /*city infos section*/
