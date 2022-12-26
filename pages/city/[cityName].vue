@@ -1,5 +1,5 @@
 <template>
-    <div v-if="cityData" class="cont">
+    <div class="cont">
 
         <header class="flex items-center justify-start gap-4">
             <div class="cityNumber">{{ cityData.cityNumber }}</div>

@@ -4,6 +4,7 @@
         <AlgeriaFeatures />
         <BestPlaces />
         <Cities />
+        <FAQ></FAQ>
     </div>
 </template>
 
