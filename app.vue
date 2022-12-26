@@ -1,9 +1,12 @@
 <template>
-  <NuxtPage />
-
+  <div>
+    <ImagesCarousel />
+    <AlgeriaFeatures />
+    <BestPlaces />
+    <Cities />
+  </div>
 </template>
 <script setup>
-
 import { AlgerianCitiesStore } from './store/AlgerianCitiesStore';
 const config = useRuntimeConfig();
 onMounted(async () => {
