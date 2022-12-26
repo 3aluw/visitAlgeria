@@ -1,7 +1,8 @@
 <template>
   <section v-if="AlgerianCitiesStore().cities">
     <ul class="list" v-if="AlgerianCitiesStore().cities">
-      <CitiesListItem v-for="city in cities" :city="city" :key="city.fields.name" />
+      <CitiesListItem v-for="city in cities" :city="city" :key="city.fields.name"
+        @click="FetchCity(city.fields.name)" />
     </ul>
   </section>
 
@@ -12,7 +13,9 @@
 import CitiesListItem from "./reusable/citiesListItem.vue";
 import { AlgerianCitiesStore } from "~/store/AlgerianCitiesStore";
 const cities = computed(() => AlgerianCitiesStore().cities);
-
+function FetchCity(city) {
+  AlgerianCitiesStore().fetchOneCity(city)
+}
 </script>
 <script>
 export default {
@@ -20,13 +23,19 @@ export default {
 }
 </script>
 <style scoped>
+section {
+  background: rgba(228, 240, 255, 0.42);
+  ;
+}
+
 .list {
-  margin-block: 3rem;
-  margin-inline: 2rem;
-  height: calc(100vh - 6rem);
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  height: calc(100vh - 2rem);
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(16, 1fr);
   grid-auto-flow: column;
+  gap: 0.8rem;
 }
 </style>

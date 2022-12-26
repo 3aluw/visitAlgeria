@@ -51,7 +51,8 @@ const animatedEl = [templText, templFirstImage, templSecondImage];
 onMounted(() => {
 
   const objLen = Object.keys(picsDic).length - 1;
-  window.addEventListener('load', () => {
+  setTimeout(() => {
+
     animatedEl.forEach((el) => el.value.style.animationPlayState = "running")
     setTimeout(() => {
       setTimeout(() => {
@@ -61,7 +62,7 @@ onMounted(() => {
           firstImageIndex.value + 2 <= objLen ? firstImageIndex.value += 2 : firstImageIndex.value = 0;
 
         }, 9000);
-      }, 2500)
+      }, 4000)
 
       setTimeout(() => {
         secondImageIndex.value += 2;
@@ -79,7 +80,7 @@ onMounted(() => {
 
 
     }, 500)
-  })
+  }, 1000)
 })
 </script>
 <script>
