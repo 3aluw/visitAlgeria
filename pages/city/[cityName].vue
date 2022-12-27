@@ -1,5 +1,5 @@
 <template>
-    <div class="cont">
+    <div v-if="cityData" class="cont">
 
         <header class="flex items-center justify-start gap-4">
             <div class="cityNumber">{{ cityData.cityNumber }}</div>
@@ -29,11 +29,11 @@
             </ul>
 
         </section>
-        <section class="things-to-do">
+        <section class="things-to-do" v-if="cityData.attractions">
             <h2>Places to visit in {{ cityData.name }}</h2>
             <carousel :items="cityData.attractions"></carousel>
         </section>
-        <section class="hospitality">
+        <section class="hospitality" v-if="cityData.urls">
             <h2>Top Hotels and restaurents in {{ cityData.name }}</h2>
             <iframe :src="cityData.urls[0]" width="640" height="480"></iframe>
 
