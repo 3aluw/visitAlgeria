@@ -1,13 +1,13 @@
 <template>
     <section>
-        <div class="sub-section relative">
-            <img src="~/assets/section3/Al-hamma-park.jpg" alt="">
+        <div class="sub-section"><img src="~/assets/section3/Martyr-Memorial.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
                 <div class="location">
                     <p> Algiers <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
                 </div>
             </div>
         </div>
+
         <div class="sub-section"><img src="~/assets/section3/chilia-mountain.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
                 <div class="location">
@@ -15,10 +15,20 @@
                 </div>
             </div>
         </div>
+
         <div class="sub-section"><img src="~/assets/section3/Ghardaia.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
                 <div class="location">
                     <p> Ghardaia <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
+                </div>
+            </div>
+        </div>
+        <div class="sub-section relative">
+
+            <img src="~/assets/section3/Al-hamma-park.jpg" alt="">
+            <div class="img-layer-top  absolute flex flex-column ">
+                <div class="location">
+                    <p> Algiers <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
                 </div>
             </div>
         </div>
@@ -29,13 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="sub-section"><img src="~/assets/section3/Martyr-Memorial.jpg" alt="">
-            <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Algiers <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
-            </div>
-        </div>
+
         <div class="sub-section"><img src="~/assets/section3/the-Atakor-Plateau,.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
                 <div class="location">
@@ -58,7 +62,7 @@ body {
 
 section {
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     padding-block: 2rem;
     background-color: rgba(228, 240, 255, 0.4);

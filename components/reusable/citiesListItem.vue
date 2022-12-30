@@ -67,7 +67,7 @@ export default {
 li {
     min-height: 0;
     cursor: pointer;
-    background: rgb(0, 180, 51, 0.5);
+    background: rgb(23 90 42 / 58%);
     color: #ffffff;
     font-family: 'Outfit';
     font-style: normal;

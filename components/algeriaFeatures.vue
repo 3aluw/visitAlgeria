@@ -66,7 +66,7 @@ export default {
     min-height: 400px;
     min-width: 100px;
     flex: 1 1 0px;
-    background: rgba(228, 240, 255, 0.6);
+    background: #ffffff;
 
     border-radius: 63px;
     padding: 1rem;
