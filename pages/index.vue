@@ -37,7 +37,7 @@ body {
 .cities-button-cont>button {
     box-sizing: border-box;
     cursor: pointer;
-    background: rgb(0, 180, 51, 0.5);
+    background: rgb(5 49 18 / 58%);
     color: #ffffff;
     font-family: 'Outfit';
     font-size: 2rem;
@@ -45,8 +45,12 @@ body {
     -webkit-text-stroke: 0.19px rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    border: 1px black solid;
+    border: 1px gray solid;
     padding-inline: 1rem;
+}
+
+.cities-button-cont>button:hover {
+    background: rgb(21, 128, 51);
 }
 
 .cities-enter-active,

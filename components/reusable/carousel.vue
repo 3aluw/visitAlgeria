@@ -4,7 +4,7 @@
         <swiper-slide v-for="item in items" :key="item.title">
 
             <article class="card-cont">
-                <a :href="item.href">
+                <a :href="item.href" rel="noopener noreferrer" target="_blank">
                     <div class="item-image">
                         <img :src="item.image" :alt="item.title">
                     </div>

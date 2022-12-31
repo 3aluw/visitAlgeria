@@ -29,16 +29,26 @@
             </ul>
 
         </section>
-        <section class="things-to-do" v-if="cityData.attractions">
+        <section class="things-to-do" v-if="cityData.links.attractions">
             <h2>Places to visit in {{ cityData.name }}</h2>
-            <carousel :items="cityData.attractions"></carousel>
+            <carousel :items="cityData.links.attractions"></carousel>
         </section>
-        <section class="hospitality" v-if="cityData.urls">
+        <section class="hospitality" v-if="cityData.links.mapEmbed">
             <h2>Top Hotels and restaurents in {{ cityData.name }}</h2>
-            <iframe :src="cityData.urls[0]" width="640" height="480"></iframe>
+            <iframe :src="cityData.links.mapEmbed" width="640" height="480"></iframe>
 
         </section>
+        <section class="buttons">
+            <h2>Discover more</h2>
+            <div class="buttons-cont">
+                <a v-for="(link, to) in cityData.links.buttons" :href="link" rel="noopener noreferrer"
+                    target="_blank"><button>
+                        <img class="logo" :src="'/logos/' + logosDic[to]">
+                        <p>{{ textsDic[to] }}</p>
+                    </button></a>
 
+            </div>
+        </section>
 
     </div>
 </template>
@@ -51,14 +61,34 @@ const route = useRoute()
 const cityName = route.params.cityName;
 //fetch teh city data from contentful
 onMounted(() => { AlgerianCitiesStore().fetchOneCity(cityName) })
-
 const cityData = computed(() => AlgerianCitiesStore().selectedCity[0]?.fields);
+
+/*info messages*/
 const safetyMessage = computed(() => {
     return cityData.safety == "Excelent" ? "You are in a very safe city" : "Overall you will be okay, but avoid going to shady neighnours or wandering lonely late at night  "
 })
 const infustractureMessage = computed(() => {
     return cityData.infustracture == "Excelent" ? "Hopefully, You will easily find all your needs" : "You are advised to plan your trip in this city very well  "
 })
+
+/* buttons*/
+const logosDic = {
+    "googleMap": "googleMap.svg",
+    "airbnb": "airbnb.svg",
+    "hotelsCom": "hotelsCom.png",
+    "djazairess": "djazairess.png",
+    "wikipedia": "wikipedia.svg",
+}
+
+const textsDic = {
+    "googleMap": "show on map",
+    "airbnb": "see on airbnb",
+    "hotelsCom": "book a hotel",
+    "djazairess": "see latest news",
+    "wikipedia": "more info",
+}
+
+
 </script>
 <style scoped>
 /*UTILITY*/
@@ -131,5 +161,59 @@ section {
 
 .hospitality iframe {
     margin: 1rem auto;
+}
+
+
+/*wallpaper section*/
+.cont {
+    position: relative;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+/*buttons */
+.buttons-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 1rem;
+}
+
+.buttons-cont button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 4rem;
+    width: 14rem;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-block: 8px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in;
+    background: white;
+    border-radius: 5px;
+    border: 0.8px solid gray;
+    font-size: medium;
+}
+
+.buttons-cont button:hover {
+    filter: grayscale(0%);
+    background: #78cc8f;
+    color: white;
+}
+
+.logo {
+    max-height: 3rem;
+    max-width: 50%;
+
 }
 </style>
