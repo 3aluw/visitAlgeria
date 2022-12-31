@@ -37,12 +37,12 @@ export default {
     },
     props: ['items'],
     setup(props) {
-        console.log(props.items)
+        /*console.log(props.items)*/
         const onSwiper = (swiper) => {
-            console.log(swiper);
+            /* console.log(swiper);*/
         };
         const onSlideChange = () => {
-            console.log('slide change');
+            /*console.log('slide change');*/
         };
         return {
             onSwiper,

@@ -4,6 +4,8 @@ export const AlgerianCitiesStore = defineStore("AlgerianCities",()=>{
 let cities =ref([]);
 let selectedCity= ref([]);
 
+
+
   async function FetchCities(){
   const {$contentful} = useNuxtApp();
   const Entries = await $contentful.getEntries({
@@ -13,6 +15,8 @@ let selectedCity= ref([]);
    cities.value = Entries.items;
   return Entries
   };
+
+
    async function  fetchOneCity(cityName){
       await FetchCities();
       //retreive the selected id
@@ -28,7 +32,7 @@ let selectedCity= ref([]);
   });
   
   selectedCity.value = Entries.items;
-  console.log( selectedCity.value)
+ /* console.log( selectedCity.value)*/
   }
 
   return{cities,selectedCity,FetchCities,fetchOneCity}

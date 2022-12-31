@@ -41,8 +41,8 @@
         <section class="buttons">
             <h2>Discover more</h2>
             <div class="buttons-cont">
-                <a v-for="(link, to) in cityData.links.buttons" :href="link" rel="noopener noreferrer"
-                    target="_blank"><button>
+                <a v-for="(link, to) in cityData.links.buttons" :href="link.replaceAll('cityNameHere', cityData.name)"
+                    rel="noopener noreferrer" target="_blank"><button>
                         <img class="logo" :src="'/logos/' + logosDic[to]">
                         <p>{{ textsDic[to] }}</p>
                     </button></a>
@@ -62,6 +62,7 @@ const cityName = route.params.cityName;
 //fetch teh city data from contentful
 onMounted(() => { AlgerianCitiesStore().fetchOneCity(cityName) })
 const cityData = computed(() => AlgerianCitiesStore().selectedCity[0]?.fields);
+
 
 /*info messages*/
 const safetyMessage = computed(() => {
