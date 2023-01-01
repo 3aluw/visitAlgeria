@@ -53,7 +53,7 @@ export default {
     display: flex;
     justify-content: center;
     justify-items: center;
-    background: rgba(228, 240, 255, 0.42);
+    background: inherit;
     padding-inline: 2rem;
 }
 
@@ -64,7 +64,8 @@ export default {
 
 .card {
     min-height: 400px;
-    min-width: 100px;
+    min-width: 13.5rem;
+    max-width: 19rem;
     flex: 1 1 0px;
     background: #ffffff;
 

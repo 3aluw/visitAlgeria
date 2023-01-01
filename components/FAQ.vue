@@ -70,7 +70,7 @@
     grid-template-columns: 100%;
     justify-items: stretch;
     justify-content: center;
-    background: rgba(228, 240, 255, 0.42);
+    background: inherit;
 }
 
 .title {

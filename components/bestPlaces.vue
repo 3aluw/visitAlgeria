@@ -65,7 +65,7 @@ section {
     min-height: 100vh;
     box-sizing: border-box;
     padding-block: 2rem;
-    background-color: rgba(228, 240, 255, 0.4);
+    background-color: inherit;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
     gap: 1.3rem

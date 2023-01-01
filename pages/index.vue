@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="global-cont">
         <ImagesCarousel />
         <AlgeriaFeatures />
         <BestPlaces />
@@ -22,7 +22,7 @@ const toggleCitites = () => {
 <style>
 body {
     margin: 0;
-    background: rgba(228, 240, 255, 0.42);
+    background: #EDEFF4;
 
 }
 
