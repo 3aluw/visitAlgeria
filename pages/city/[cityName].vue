@@ -1,15 +1,16 @@
 <template>
     <div v-if="cityData" class="cont">
 
-        <header class="flex items-center justify-start gap-4">
-            <div class="cityNumber">{{ cityData.cityNumber }}</div>
-
-            <div class="cityName">{{ cityData.name }}</div>
+        <header class="flex items-center justify-start gap-4 flex-wrap">
+            <div class="flex">
+                <div class="cityNumber">{{ cityData.cityNumber }}</div>
+                <div class="cityName">{{ cityData.name }}</div>
+            </div>
             <div class="summary">{{ cityData.summary }}</div>
 
         </header>
         <section class="infos">
-            <ul class="line-one flex justify-between">
+            <ul class="line-one flex justify-between flex-wrap">
                 <li><span>Area:</span> {{ cityData.area }}km2</li>
                 <li><span>population:</span> +{{ cityData.population }}</li>
                 <li><span>climate:</span> {{ cityData.climate }}</li>
@@ -150,7 +151,7 @@ section {
 
 .infos ul li {
     font-family: 'Century';
-
+    padding-block: 0.5rem;
     font-size: 1rem;
 }
 

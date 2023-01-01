@@ -1,6 +1,16 @@
 <template v-if="items">
     <swiper :modules="modules" :slides-per-view="3" :space-between="50" navigation @swiper="onSwiper"
-        @slideChange="onSlideChange">
+        @slideChange="onSlideChange" :breakpoints="{
+    '320': {
+        slidesPerView: 2,
+        spaceBetween: 20,
+    },
+
+    '720': {
+        slidesPerView: 4,
+        spaceBetween: 50,
+    },
+}">
         <swiper-slide v-for="item in items" :key="item.title">
 
             <article class="card-cont">
