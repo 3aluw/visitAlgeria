@@ -10,6 +10,7 @@
             <Cities v-if="showCitites" />
         </Transition>
         <FAQ></FAQ>
+
     </div>
 </template>
 <script setup>

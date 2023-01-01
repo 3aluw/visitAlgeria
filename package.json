@@ -12,6 +12,7 @@
     "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
+    "@mdi/font": "^7.1.96",
     "@pinia/nuxt": "^0.4.3",
     "contentful": "^9.2.9",
     "sass": "^1.57.1",

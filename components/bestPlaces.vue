@@ -2,7 +2,7 @@
     <section>
         <div class="sub-section"><img class="object-right" src="~/assets/section3/Martyr-Memorial.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <NuxtLink :to="(`/city/algiers`)" target="_blank">
+                <NuxtLink :to="(`/city/Algiers`)" target="_blank">
                     <div class="location">
                         <p> Algiers <img src="~/assets/icons/external-link.svg" alt="external link"></p>
                     </div>
@@ -12,7 +12,7 @@
 
         <div class="sub-section"><img src="~/assets/section3/chilia-mountain.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <NuxtLink :to="(`/city/batna`)" target="_blank">
+                <NuxtLink :to="(`/city/Batna`)" target="_blank">
                     <div class="location">
                         <p> Batna <img src="~/assets/icons/external-link.svg" alt="external link"></p>
                     </div>
@@ -22,7 +22,7 @@
 
         <div class="sub-section"><img src="~/assets/section3/Ghardaia.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <NuxtLink :to="(`/city/ghardaia`)" target="_blank">
+                <NuxtLink :to="(`/city/Ghardaia`)" target="_blank">
                     <div class="location">
                         <p> Ghardaia <img src="~/assets/icons/external-link.svg" alt="external link"> </p>
                     </div>
@@ -33,7 +33,7 @@
 
             <img src="~/assets/section3/Al-hamma-park.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <NuxtLink :to="(`/city/algiers`)" target="_blank">
+                <NuxtLink :to="(`/city/Algiers`)" target="_blank">
                     <div class="location">
                         <p> Algiers <img src="~/assets/icons/external-link.svg" alt="external link"> </p>
                     </div>

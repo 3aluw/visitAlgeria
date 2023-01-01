@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     alias: {
         pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
     },
-    css: ['vuetify/lib/styles/main.sass'],
+    css: ['vuetify/lib/styles/main.sass' ,'@mdi/font/css/materialdesignicons.min.css',],
     build: {
       transpile: ['vuetify'],
     },
