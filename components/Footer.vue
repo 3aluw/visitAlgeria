@@ -41,7 +41,9 @@
                 <div class="sm:w-1/2 pr-4 pl-4 md:w-1/4 pr-4 pl-4">
                     <h6>Quick Links</h6>
                     <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li>
+                            <NuxtLink :to="(`/about-me`)" target="_blank"> About Us</NuxtLink>
+                        </li>
                         <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
                         <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
                         <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
@@ -59,7 +61,7 @@
                     </p>
                 </div>
 
-                <div class="md:w-1/3 pr-4 pl-4 sm:w-1/2 pr-4 pl-4 sm:w-full pr-4 pl-4">
+                <div class="md:w-1/3 pr-4 pl-4 sm:w-1/2 pr-4 pl-4 sm:w-full pr-4 pl-4 ">
                     <ul class="social-icons">
                         <li><a class="patreon" href="#"><v-icon>
                                     mdi-patreon
@@ -108,7 +110,8 @@
 }
 
 .site-footer a:hover {
-    color: #3366cc;
+    color: rgb(33 192 78);
+    ;
     text-decoration: none;
 }
 
@@ -128,7 +131,7 @@
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-    color: #3366cc;
+    color: rgb(33 192 78);
     text-decoration: none;
 }
 
@@ -137,7 +140,8 @@
 }
 
 .site-footer .social-icons {
-    text-align: right
+    text-align: right;
+    margin-block: 0.1rem
 }
 
 .site-footer .social-icons a {
@@ -210,7 +214,7 @@
 .social-icons a:focus,
 .social-icons a:hover {
     color: #fff;
-    background-color: #29aafe
+    background-color: rgb(33 192 78)
 }
 
 .social-icons.size-sm a {
@@ -220,8 +224,8 @@
     font-size: 14px
 }
 
-.social-icons a.facebook:hover {
-    background-color: #3b5998
+.social-icons a.instagram:hover {
+    background-color: #cc4e13
 }
 
 .social-icons a.twitter:hover {
