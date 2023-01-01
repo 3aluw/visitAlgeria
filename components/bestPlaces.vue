@@ -2,49 +2,61 @@
     <section>
         <div class="sub-section"><img src="~/assets/section3/Martyr-Memorial.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Algiers <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
+                <NuxtLink :to="(`/city/algiers`)" target="_blank">
+                    <div class="location">
+                        <p> Algiers <img src="~/assets/icons/external-link.svg" alt="external link"></p>
+                    </div>
+                </NuxtLink>
             </div>
         </div>
 
         <div class="sub-section"><img src="~/assets/section3/chilia-mountain.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Batna <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
+                <NuxtLink :to="(`/city/batna`)" target="_blank">
+                    <div class="location">
+                        <p> Batna <img src="~/assets/icons/external-link.svg" alt="external link"></p>
+                    </div>
+                </NuxtLink>
             </div>
         </div>
 
         <div class="sub-section"><img src="~/assets/section3/Ghardaia.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Ghardaia <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
+                <NuxtLink :to="(`/city/ghardaia`)" target="_blank">
+                    <div class="location">
+                        <p> Ghardaia <img src="~/assets/icons/external-link.svg" alt="external link"> </p>
+                    </div>
+                </NuxtLink>
             </div>
         </div>
         <div class="sub-section relative">
 
             <img src="~/assets/section3/Al-hamma-park.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Algiers <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
+                <NuxtLink :to="(`/city/algiers`)" target="_blank">
+                    <div class="location">
+                        <p> Algiers <img src="~/assets/icons/external-link.svg" alt="external link"> </p>
+                    </div>
+                </NuxtLink>
             </div>
         </div>
         <div class="sub-section"><img src="~/assets/section3/Gouraya.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Bejaia <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
+                <NuxtLink :to="(`/city/Bejaia`)" target="_blank">
+                    <div class="location">
+                        <p> Bejaia <img src="~/assets/icons/external-link.svg" alt="external link"></p>
+                    </div>
+                </NuxtLink>
             </div>
         </div>
 
         <div class="sub-section"><img src="~/assets/section3/the-Atakor-Plateau,.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
-                <div class="location">
-                    <p> Adrar <a href="/"> <img src="~/assets/icons/external-link.svg" alt="external link"></a> </p>
-                </div>
+                <NuxtLink :to="(`/city/Adrar`)" target="_blank">
+                    <div class="location">
+                        <p> Adrar <img src="~/assets/icons/external-link.svg" alt="external link"></p>
+                    </div>
+                </NuxtLink>
             </div>
         </div>
     </section>
@@ -101,7 +113,8 @@ section {
 }
 
 .location>p {
-
+    display: flex;
+    align-items: center;
     font-family: 'Shanti';
     font-style: normal;
     font-weight: 400;
@@ -109,10 +122,10 @@ section {
     line-height: 46px;
 }
 
-.location>p>a>img {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
+.location>p>img {
+
+    max-height: 2rem;
     display: inline;
-    margin-bottom: 4px;
+
 }
 </style>

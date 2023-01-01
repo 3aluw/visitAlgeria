@@ -115,6 +115,8 @@ h2 {
 
 .cont {
     padding: 1rem;
+    background: #EDEFF4;
+
 }
 
 section {
