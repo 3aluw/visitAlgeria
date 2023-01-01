@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="sub-section"><img src="~/assets/section3/Martyr-Memorial.jpg" alt="">
+        <div class="sub-section"><img class="object-right" src="~/assets/section3/Martyr-Memorial.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
                 <NuxtLink :to="(`/city/algiers`)" target="_blank">
                     <div class="location">
@@ -68,6 +68,13 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 600px) {
+    section {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) !important;
+    }
+}
+
 body {
     margin: 0;
 }
