@@ -1,5 +1,7 @@
 <template>
+    <h1>Some famous avenues</h1>
     <section>
+
         <div class="sub-section"><img class="object-right" src="~/assets/section3/Martyr-Memorial.jpg" alt="">
             <div class="img-layer-top  absolute flex flex-column ">
                 <NuxtLink :to="(`/city/Algiers`)" target="_blank">
@@ -77,6 +79,15 @@ export default {
 
 body {
     margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 700;
 }
 
 section {

@@ -46,7 +46,9 @@
                         </li>
                         <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
                         <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                        <li>
+                            <NuxtLink :to="(`/privacy-policy`)" target="_blank">Privacy Policy</NuxtLink>
+                        </li>
                         <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
                     </ul>
                 </div>
