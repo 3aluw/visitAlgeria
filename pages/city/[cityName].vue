@@ -211,7 +211,7 @@ section {
 
 .buttons-cont button:hover {
     filter: grayscale(0%);
-    background: #78cc8f;
+    background: rgb(21, 128, 51);
     color: white;
 }
 
