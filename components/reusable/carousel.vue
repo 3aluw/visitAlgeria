@@ -80,18 +80,24 @@ export default {
 
 .swiper-slide {
     height: auto;
+    padding-block: 1rem;
 }
 
 .card-cont {
 
-    border: 0.5px solid black;
-    border-radius: 12px;
+
+
     height: 100%;
+    background: white;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s ease-in;
 }
 
 .card-cont:hover {
-    color: rgb(4, 184, 73);
-    filter: contrast(115%);
+    color: rgb(21, 128, 51);
+    filter: contrast(105%);
     font-size: 1.2rem;
 }
 
@@ -107,14 +113,14 @@ export default {
 .item-image {
     display: block;
     height: 80%;
+    padding: 0.5rem;
 
-    border-radius: 12px;
 }
 
 .item-image>img {
     object-fit: cover;
     height: 100%;
-    border-radius: 0.5rem;
+
 }
 
 .item-title {
@@ -125,5 +131,6 @@ export default {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: 500;
+    padding-inline: 0.4rem;
 }
 </style>
