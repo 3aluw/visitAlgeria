@@ -17,8 +17,7 @@
                         <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required>
                     </fieldset>
                     <fieldset>
-                        <textarea placeholder="Type your message here...." name="message" tabindex="5"
-                            required></textarea>
+                        <textarea placeholder="Type your message here...." name="message" tabindex="5" required></textarea>
                     </fieldset>
                     <fieldset>
                         <button type="submit" id="contact-submit">Submit</button>
@@ -31,7 +30,7 @@
     </div>
 </template>
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic');
 
 * {
     margin: 0;
