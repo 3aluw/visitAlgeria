@@ -9,7 +9,7 @@
                 the
                 web. </p>
         </div>
-        <div class="img-cont"> <img src="~/assets/quick links/about-me.svg" alt="me asleep on my laptop"></div>
+        <div class="img-cont"> <img src="~/assets/quick-links/about-me.svg" alt="me asleep on my laptop"></div>
         <div class="text-nd-cont">the project stills humble, and I'm looking for new ideas/features to implement, if you
             have one
             send it by clicking on the "contact me" button 👇
