@@ -16,7 +16,9 @@
                 <a rel="noopener noreferrer" target="_blank"><button> <v-icon>
                             mdi-patreon
                         </v-icon>support on patreon </button></a>
-                <a rel="noopener noreferrer" target="_blank"><button> <v-icon>
+                <a rel="noopener noreferrer" target="_blank"
+                    href="mailto:2000aballah2014@gmail.com?subject=a%20mailAbout%20visit%20Algeria%20site"><button>
+                        <v-icon>
                             mdi-file
                         </v-icon>contact me</button></a>
             </div>
