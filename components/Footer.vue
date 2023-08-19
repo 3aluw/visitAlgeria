@@ -44,8 +44,9 @@
                         <li>
                             <NuxtLink :to="(`/about-me`)" target="_blank"> About Us</NuxtLink>
                         </li>
-                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                        <li><a href="mailto:2000aballah2014@gmail.com?subject=a%20mail%20About%20visit%20Algeria%20site">Contact
+                                Us</a></li>
+                        <li><a href="">Contribute</a></li>
                         <li>
                             <NuxtLink :to="(`/privacy-policy`)" target="_blank">Privacy Policy</NuxtLink>
                         </li>
@@ -59,7 +60,7 @@
             <div class="flex flex-wrap ">
                 <div class="md:w-2/3 pr-4 pl-4 sm:w-1/2 pr-4 pl-4 sm:w-full pr-4 pl-4">
                     <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
-                        <a href="#">Scanfcode</a>.
+                        <a href="#">Abdellah</a>.
                     </p>
                 </div>
 

@@ -1,15 +1,14 @@
 <template>
-
     <section>
         <div class="text-cont">
             <h1>about us (me 😀) </h1>
             <p> I'm just a solo programmer who was trying to find an interesting idea to work on, after some digging i
                 found
-                out that incoming tourists to my country (Algeria) may need some guidence that won't easily be found on
+                out that incoming tourists to my country (Algeria) may need some guidance that won't easily be found on
                 the
                 web. </p>
         </div>
-        <div class="img-cont"> <img src="~/assets/quick links/about-me.svg" alt="me asleep on my laptop"></div>
+        <div class="img-cont"> <img src="~/assets/quick-links/about-me.svg" alt="me asleep on my laptop"></div>
         <div class="text-nd-cont">the project stills humble, and I'm looking for new ideas/features to implement, if you
             have one
             send it by clicking on the "contact me" button 👇
@@ -24,7 +23,6 @@
         </div>
 
     </section>
-
 </template>
 <style scoped>
 section {
